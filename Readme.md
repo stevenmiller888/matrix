@@ -82,8 +82,8 @@ Matrix.multiply(m1, 4);   // perform scalar multiplication
 
 [MIT](https://tldrlegal.com/license/mit-license)
 
-[npm-image]: https://img.shields.io/npm/v/matrix.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/matrix
+[npm-image]: https://img.shields.io/npm/v/node-matrix.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/node-matrix
 [circle-image]: https://img.shields.io/circleci/project/stevenmiller888/matrix.svg
 [circle-url]: https://circleci.com/gh/stevenmiller888/matrix
 [license-image]: https://img.shields.io/npm/l/express.svg

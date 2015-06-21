@@ -1,0 +1,17 @@
+{
+  "name": "node-matrix",
+  "description": "A tiny matrix library",
+  "author": "Steven Miller",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevenmiller888/matrix"
+  },
+  "main": "lib/index.js",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "jscs": "1.12.0",
+    "mocha": "2.x"
+  }
+}

@@ -186,20 +186,6 @@ describe('Matrix()', function() {
       assert.equal(result[1][1], 12);
       assert.equal(result[1][2], 6);
     });
-
-    it('should not perform multiplication on two matrices with inappropriate dimensions', function() {
-      var matrixOne = Matrix([
-        [7, 1, 6],
-        [2, 6, 3]
-      ]);
-
-      var matrixTwo = Matrix([
-        [9, 1, 8],
-        [8, 2, 6]
-      ]);
-
-      assert.throws(function(){ Matrix.multiply(matrixOne, matrixTwo) }, /You can only multiply matrices where number of columns in first equals number of rows in second/);
-    });
   });
   
   describe('#transform()', function() {

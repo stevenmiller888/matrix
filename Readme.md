@@ -46,7 +46,7 @@ var matrix = Matrix({ rows: 3, cols: 2, val: 5 });
 
 ```js
 // Set the value of each element to a random number
-var matrix = Matrix({ rows: 3, cols: 2, val: Math.random });
+var matrix = Matrix({ rows: 3, cols: 2, vals: Math.random });
 ```
 
 ```js
@@ -76,6 +76,12 @@ Matrix.subtract(m1, m2);
 ```js
 Matrix.multiply(m1, m2);
 Matrix.multiply(m1, 4);   // perform scalar multiplication
+```
+
+### matrix.transform()
+
+```js
+matrix.transform(function(num) { return num - 2 });   // subtract two from each element in the matrix
 ```
 
 ## License

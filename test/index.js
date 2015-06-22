@@ -37,8 +37,8 @@ describe('Matrix()', function() {
     assert.equal(matrix[2][1], 0);
   });
 
-  it('should accept val property as a number to set initial values', function() {
-    var matrix = Matrix({ rows: 3, cols: 2, val: 1 });
+  it('should accept vals property as a number to set initial values', function() {
+    var matrix = Matrix({ rows: 3, cols: 2, vals: 1 });
 
     assert.deepEqual(matrix.dimensions, [3, 2]);
     assert.equal(matrix[0][0], 1);
@@ -49,8 +49,8 @@ describe('Matrix()', function() {
     assert.equal(matrix[2][1], 1);
   });
 
-  it('should accept val property as a function to set initial values', function() {
-    var matrix = Matrix({ rows: 1, cols: 2, val: Math.random });
+  it('should accept vals property as a function to set initial values', function() {
+    var matrix = Matrix({ rows: 1, cols: 2, vals: Math.random });
 
     assert.deepEqual(matrix.dimensions, [1, 2]);
     assert(!Number.isInteger(matrix[0][0]) && (matrix[0][0] > 0 && matrix[0][0] < 1));
@@ -199,6 +199,24 @@ describe('Matrix()', function() {
       ]);
 
       assert.throws(function(){ Matrix.multiply(matrixOne, matrixTwo) }, /You can only multiply matrices where number of columns in first equals number of rows in second/);
+    });
+  });
+  
+  describe('#transform()', function() {
+    it('should pass each element in the matrix into a function and use the result as the new value', function() {
+      var matrix = Matrix([
+        [5, 3, 6],
+        [7, 4, 3]
+      ]);
+
+      matrix.transform(function(num) { return num + 2 });
+
+      assert.equal(matrix[0][0], 7);
+      assert.equal(matrix[0][1], 5);
+      assert.equal(matrix[0][2], 8);
+      assert.equal(matrix[1][0], 9);
+      assert.equal(matrix[1][1], 6);
+      assert.equal(matrix[1][2], 5);
     });
   });
 });

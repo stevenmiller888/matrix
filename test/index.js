@@ -195,14 +195,14 @@ describe('Matrix()', function() {
         [7, 4, 3]
       ]);
 
-      matrix.transform(function(num) { return num + 2 });
+      var transformed = matrix.transform(function(num) { return num + 2 });
 
-      assert.equal(matrix[0][0], 7);
-      assert.equal(matrix[0][1], 5);
-      assert.equal(matrix[0][2], 8);
-      assert.equal(matrix[1][0], 9);
-      assert.equal(matrix[1][1], 6);
-      assert.equal(matrix[1][2], 5);
+      assert.equal(transformed[0][0], 7);
+      assert.equal(transformed[0][1], 5);
+      assert.equal(transformed[0][2], 8);
+      assert.equal(transformed[1][0], 9);
+      assert.equal(transformed[1][1], 6);
+      assert.equal(transformed[1][2], 5);
     });
   });
 });

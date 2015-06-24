@@ -1,4 +1,8 @@
 
+0.0.4 / June 24, 2015
+
+  * Updated transform to return new Matrix
+
 0.0.3 / June 21, 2015
 
   * Removed dimension check in multiply

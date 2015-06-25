@@ -1,4 +1,8 @@
 
+0.0.5 / June 25, 2015
+
+  * Added element-wise multiplication
+
 0.0.4 / June 24, 2015
 
   * Updated transform to return new Matrix

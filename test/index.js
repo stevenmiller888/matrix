@@ -188,6 +188,34 @@ describe('Matrix()', function() {
     });
   });
   
+  describe('#multiplyElements()', function() {
+    it('should perform element-wise multiplication on two matrices', function() {
+      var matrixOne = Matrix([
+        [1, 0, 3],
+        [5, 3, 8],
+        [2, 4, 6]
+      ]);
+
+      var matrixTwo = Matrix([
+        [2, 3, 7],
+        [9, 1, 5],
+        [8, 8, 3]
+      ]);
+
+      var result = Matrix.multiplyElements(matrixOne, matrixTwo);
+
+      assert.equal(result[0][0], 2);
+      assert.equal(result[0][1], 0);
+      assert.equal(result[0][2], 21);
+      assert.equal(result[1][0], 45);
+      assert.equal(result[1][1], 3);
+      assert.equal(result[1][2], 40);
+      assert.equal(result[2][0], 16);
+      assert.equal(result[2][1], 32);
+      assert.equal(result[2][2], 18);
+    });
+  });
+
   describe('#transform()', function() {
     it('should pass each element in the matrix into a function and use the result as the new value', function() {
       var matrix = Matrix([

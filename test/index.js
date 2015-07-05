@@ -216,6 +216,25 @@ describe('Matrix()', function() {
     });
   });
 
+  describe('#tranpose()', function() {
+    it('should return the transposition of the matrix', function() {
+      var matrix = Matrix([
+        [1],
+        [5],
+        [2],
+        [3]
+      ]);
+
+      var result = matrix.transpose();
+
+      assert.deepEqual(result.dimensions, [1, 4]);
+      assert.equal(result[0][0], 1);
+      assert.equal(result[0][1], 5);
+      assert.equal(result[0][2], 2);
+      assert.equal(result[0][3], 3);
+    });
+  });
+
   describe('#transform()', function() {
     it('should pass each element in the matrix into a function and use the result as the new value', function() {
       var matrix = Matrix([

@@ -1,4 +1,8 @@
 
+0.0.6 / July 05, 2015
+
+  * Added transpose
+
 0.0.5 / June 25, 2015
 
   * Added element-wise multiplication

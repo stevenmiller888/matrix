@@ -32,29 +32,21 @@ Matrix.add(m1, m2); // [ [1, 3, 6], [8, 5, 0] ]
 
 ### Matrix()
 
-Create a new instance of Matrix. You can pass in an object specifying the dimensions or you can pass in a multidimensional array:
+Create a new instance of Matrix. You can pass in a multidimensional array:
 
 ```js
-// Set the value of each element to 0
-var matrix = Matrix({ rows: 3, cols: 2 });
-```
-
-```js
-// Set the value of each element to 5
-var matrix = Matrix({ rows: 3, cols: 2, val: 5 });
-```
-
-```js
-// Set the value of each element to a random number
-var matrix = Matrix({ rows: 3, cols: 2, vals: Math.random });
-```
-
-```js
-// Infers the number of rows and columns
 var matrix = Matrix([
   [4, 1, 9],
   [3, 8, 2]
 ]);
+```
+
+Or you can pass in an object specifying the dimensions and default values. If you don't pass in a default value, or a function to be executed for each element to calculate it's value, then it will set the value of each element to 0.
+
+```js
+var matrix = Matrix({ rows: 3, columns: 2 }); // Set the value of each element to 0
+var matrix = Matrix({ rows: 3, columns: 2, values: 5 });  // // Set the value of each element to 5
+var matrix = Matrix({ rows: 3, columns: 2, values: Math.random }); // Set the value of each element to a random number
 ```
 
 You can access the matrix's values the same way you can access them from an array: `matrix[0][1]`, with `0` corresponding to the row number and `1` corresponding to the column number. You also now have access to `matrix.dimensions`, which will return an array where the first element is the number of rows in the matrix, and the second element is the number of columns in the matrix.
@@ -74,8 +66,25 @@ Matrix.subtract(m1, m2);
 ### Matrix.multiply()
 
 ```js
-Matrix.multiply(m1, m2);
-Matrix.multiply(m1, 4);   // perform scalar multiplication
+Matrix.multiply(m1, m2);  // matrix multiplication
+```
+
+### Matrix.multiplyScalar()
+
+```js
+Matrix.multiplyScalar(m1, 4); // scalar multiplication
+```
+
+### Matrix.multiplyElements()
+
+```js
+Matrix.multiplyElements(m1, m2); // element-wise multiplication
+```
+
+### matrix.transpose()
+
+```js
+matrix.tranpose();
 ```
 
 ### matrix.transform()

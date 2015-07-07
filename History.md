@@ -1,4 +1,9 @@
 
+0.1.0 / July 06, 2015
+
+  * Moved scalar multiplication into separate method
+  * Changed options object
+
 0.0.6 / July 05, 2015
 
   * Added transpose

@@ -26,7 +26,7 @@ describe('Matrix()', function() {
   });
 
   it('should accept an object of dimensions', function() {
-    var matrix = Matrix({ rows: 3, cols: 2 });
+    var matrix = Matrix({ rows: 3, columns: 2 });
 
     assert.deepEqual(matrix.dimensions, [3, 2]);
     assert.equal(matrix[0][0], 0);
@@ -37,8 +37,8 @@ describe('Matrix()', function() {
     assert.equal(matrix[2][1], 0);
   });
 
-  it('should accept vals property as a number to set initial values', function() {
-    var matrix = Matrix({ rows: 3, cols: 2, vals: 1 });
+  it('should accept values property as a number to set initial values', function() {
+    var matrix = Matrix({ rows: 3, columns: 2, values: 1 });
 
     assert.deepEqual(matrix.dimensions, [3, 2]);
     assert.equal(matrix[0][0], 1);
@@ -49,8 +49,8 @@ describe('Matrix()', function() {
     assert.equal(matrix[2][1], 1);
   });
 
-  it('should accept vals property as a function to set initial values', function() {
-    var matrix = Matrix({ rows: 1, cols: 2, vals: Math.random });
+  it('should accept values property as a function to set initial values', function() {
+    var matrix = Matrix({ rows: 1, columns: 2, values: Math.random });
 
     assert.deepEqual(matrix.dimensions, [1, 2]);
     assert(!Number.isInteger(matrix[0][0]) && (matrix[0][0] > 0 && matrix[0][0] < 1));
@@ -170,14 +170,16 @@ describe('Matrix()', function() {
       assert.equal(result[2][1], 13);
       assert.equal(result[2][2], 21);
     });
+  });
 
+  describe('#multiplyScalar()', function() {
     it('should multiply a matrix by a scalar', function() {
       var matrixOne = Matrix([
         [7, 1, 6],
         [2, 6, 3]
       ]);
 
-      var result = Matrix.multiply(matrixOne, 2);
+      var result = Matrix.multiplyScalar(matrixOne, 2);
 
       assert.equal(result[0][0], 14);
       assert.equal(result[0][1], 2);
@@ -187,7 +189,7 @@ describe('Matrix()', function() {
       assert.equal(result[1][2], 6);
     });
   });
-  
+
   describe('#multiplyElements()', function() {
     it('should perform element-wise multiplication on two matrices', function() {
       var matrixOne = Matrix([

@@ -2,7 +2,7 @@
   "name": "node-matrix",
   "description": "A tiny matrix library",
   "author": "Steven Miller",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/stevenmiller888/matrix"

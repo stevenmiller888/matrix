@@ -1,4 +1,8 @@
 
+0.1.1 / July 24, 2015
+
+  * Removed matrix requirement to perform operations
+
 0.1.0 / July 06, 2015
 
   * Moved scalar multiplication into separate method

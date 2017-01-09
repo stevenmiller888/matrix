@@ -84,7 +84,7 @@ Matrix.multiplyElements(m1, m2); // element-wise multiplication
 ### matrix.transpose()
 
 ```js
-matrix.tranpose();
+matrix.transpose();
 ```
 
 ### matrix.transform()

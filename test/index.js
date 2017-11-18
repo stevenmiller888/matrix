@@ -148,14 +148,14 @@ describe('Matrix()', function() {
   describe('#multiply()', function() {
     it('should perform multiplication on two matrices with appropriate dimensions', function() {
       var matrixOne = Matrix([
-        [5, 3, 6],
-        [7, 4, 3]
-      ]);
-
-      var matrixTwo = Matrix([
         [4, 1],
         [9, 4],
         [3, 1]
+      ]);
+
+      var matrixTwo = Matrix([
+        [5, 3, 6],
+        [7, 4, 3]
       ]);
 
       var result = Matrix.multiply(matrixOne, matrixTwo);

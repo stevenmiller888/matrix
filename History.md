@@ -1,4 +1,19 @@
 
+1.0.0 / 2017-11-18
+==================
+
+  * Updated Matrix#multiply()
+  * Added unit test for Matrix#mulitply() with incompatible dimensions
+  * removed requirement to use matrix in operations
+  * moved scalar multiplication into separate method
+  * added transpose
+  * added element-wise multiplication
+  * updated transform
+  * removed dimension check in multiply
+  * added transform
+  * updated readme.md
+  * initial commit
+
 0.1.1 / July 24, 2015
 
   * Removed matrix requirement to perform operations

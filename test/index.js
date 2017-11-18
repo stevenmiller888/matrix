@@ -170,6 +170,21 @@ describe('Matrix()', function() {
       assert.equal(result[2][1], 13);
       assert.equal(result[2][2], 21);
     });
+
+    it('should not perform multiplication on two matrices with incompatible dimensions', function() {
+      var matrixOne = Matrix([
+        [0, 0],
+        [0, 0]
+      ]);
+
+      var matrixTwo = Matrix([
+        [0, 0],
+        [0, 0],
+        [0, 0]
+      ]);
+
+      assert.throws(function(){ Matrix.multiply(matrixOne, matrixTwo) }, /You can only multiply matrices with compatible dimensions/)
+    });
   });
 
   describe('#multiplyScalar()', function() {
